@@ -1,0 +1,272 @@
+2010-06-07  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add new gendarme directories
+
+2010-04-18  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* README: Add instructions for building from SVN
+
+2010-03-02  Marek Habersack  <mhabersack@novell.com>
+
+	* configure.in: added check for dmcs, defines DMCS_PRESENT
+	conditional if found. Needed to build docbrowser with dmcs now
+	that mono from trunk tools are built with dmcs.
+
+2010-02-23  Michael Hutchinson  <mhutchinson@novell.com>
+
+	* configure.in: Add docbrowser/theme-icons/Makefile.am
+
+2010-02-03  Michael Hutchinson  <mhutchinson@novell.com>
+
+	* Makefile.am:
+	* configure.in: Capture ACLOCAL_FLAGS for autoreconf
+	  so building is less painful on Mac.
+
+2010-02-03  Michael Hutchinson  <mhutchinson@novell.com>
+
+	* configure.in:
+	* asn1view/gtk/Makefile.am
+	* docbrowser/BrowserWidget.cs:
+	* docbrowser/Makefile.am: Make Gnome# optional.
+
+	* autogen.sh: Pass ACLOCAL_FlAGS to aclocal.
+
+2009-11-29  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Now 2.7
+
+2009-09-24 Gonzalo Paniagua Javier <gonzalo@novell.com>
+
+	* configure.in: avoid a lot of warnings.
+
+2009-09-20  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add gendarme.5.in
+
+2008-12-15  Miguel de Icaza  <miguel@novell.com>
+
+	* configure.in: Detect the proper LIB_PREFIX and LIB_SUFIX to fix
+	the crasher for gsharp when trying to Plot on other systems.
+
+2009-06-05  Michael Hutchinson  <mhutchinson@novell.com>
+
+	* configure.in: Fix build.
+
+2009-06-03  Jonathan Pryor <jpryor@novell.com>
+
+	* Makefile.am: Add webdoc to the build.
+
+2008-12-02  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Remove AC_OUTPUT on gnunit files since they break
+	make dist
+
+2008-12-01  Atsushi Enomoto  <atsushi@ximian.com>
+
+	* Makefile.am : remove gnunit. It does not build anymore.
+
+2008-11-17  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Produce gendarme.exe.config from .in file (modified
+	patch from Jesse Jones).
+
+2008-11-10  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Bump to 2.3
+
+2008-11-09  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add Gendarme framework unit test makefile generation.
+
+2008-10-10  Massimiliano Mantione  <massi@ximian.com>
+	* Mono.Profiler/Mono.Profiler.mds, Mono.Profiler/mprof-runtime/:
+	Preliminary (but working) code to control the profiler at runtime.
+
+2008-10-09 Daniel Nauck <dna@mono-project.de>
+
+        * Makefile.am, configure.in:
+		add gsharp to the build
+
+2008-08-26  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add Gendarme's Design.Generic rules makefile support.
+
+2008-08-25  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add Gendarme's Security.Cas rules makefile support.
+
+2008-08-16  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add Gendarme's Design.Linq rules makefile support.
+
+2008-08-12  Massimiliano Mantione  <massi@ximian.com>
+	* Mono.Profiler/Makefile.am, Mono.Profiler/adjust-makefiles.sh:
+	More fixes for the Mono.Profiler integration.
+
+2008-08-12  Massimiliano Mantione  <massi@ximian.com>
+	* Makefile.am, configure.in: Integrated Mono.Profiler in the build.
+	* Mono.Profiler/configure.ac, Mono.Profiler/autogen.sh:
+	Deleted (no longer needed).
+	* Mono.Profiler/adjust-makefiles.sh: Added this script to fix the
+	makefiles again if they are regenerated from Monodevelop.
+
+2008-08-11  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Bump Gendarme version to match the Mono release.
+
+2008-08-11  Massimiliano Mantione  <massi@ximian.com>
+
+	* Makefile.am: reverted previous commit (it breaks the build).
+
+2008-08-11  Massimiliano Mantione  <massi@ximian.com>
+
+	* Makefile.am: Added Mono.Profiler subdirectory.
+
+2008-07-14  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Bump Gendarme to 0.2.0.0 for the Mono 2.0 branch.
+
+2008-06-14  Andreia Gaita <avidigal@novell.com> 
+
+	* configure.in: Enable webkit and mono.webbrowser detection.
+
+2008-04-27  Nestor Salceda  <nestor.salceda@gmail.com>
+
+	* configure.in: Add Maintainability setup to the build.
+
+2008-03-22  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add Gendarme's Wizard and Win32 setup to the build
+
+2008-03-12  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Add Gendarme's Test.Rules makefile support.
+
+2008-03-08  Andreia Gaita  <avidigal@novell.com>
+
+	* configure.in (docbrowser): Add mono-webbrowser check, and tweak
+	the detected browser engine message to list what is available.
+
+2008-03-07  Alp Toker  <alp@nuanti.com>
+
+	* configure.in: Add no-op webkit-sharp check (for docbrowser).
+
+2008-02-16  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Gendarme does not need the .xml[.in] files anymore :)
+
+2008-02-01  Andrew Jorgensen  <ajorgensen@novell.com>
+
+	* configure.in: get the path to Mono.Cecil.dll during configure
+
+2008-01-28  Wade Berrier  <wberrier@novell.com>
+
+	* configure.in: version bump -> 1.9
+
+2007-12-12  Mike Kestner  <mkestner@novell.com>
+
+	* configure.in: update pkgconfig checks for gtkhtml-sharp-3.14
+	and for gconf without Requires: gnome-sharp.
+	* docbrowser/Makefile.am: update for GACd gtkhtml-sharp-3.14.
+
+2007-11-09  Wade Berrier  <wberrier@novell.com>
+
+	* configure.in: define MONO_TOOSL in a mcs friendly way (svn revs)
+	version bump -> 1.2.6
+
+2007-11-08  Mike Kestner  <mkestner@novell.com>
+
+	* configure.in: configure checks for gtkhtml-sharp-3.14
+	with fallback to 2.0.
+
+2007-04-19  Wade Berrier  <wberrier@novell.com>
+
+	* configure.in: version bump -> 1.2.4
+
+2007-01-31  Mike Kestner  <mkestner@novell.com>
+
+	* configure.in: add ilcontrast tool.
+	* Makefile.am: add ilcontrast tool.
+
+2007-01-25  Wade Berrier  <wberrier@novell.com>
+
+	* configure.in: version bump -> 1.2.3
+
+2006-11-17  Wade Berrier  <wberrier@novell.com>
+
+	* configure.in: version bump -> 1.2.1
+
+2006-10-30  Wade Berrier  <wberrier@novell.com>
+
+	* Makefile.am: Add create-native-map to SUBDIRS so building from a
+	tarball works
+
+2006-10-24  Jonathan Pryor <jonpryor@vt.edu>
+
+	* configure.in: Add create-native-map program.
+	* Makefile.am: Build create-native-map.
+
+2006-01-16 Rafael Ferreira <raf@ophion.org>
+	* configure.in: updated to use gtk-sharp-2.0/gecko-sharp-2.0
+	this fixes bugs# 76054 & 76544 related to Pango bugs.
+
+2005-11-27  C.J. Collier <cjcollier@colliertech.org>
+	* docbrowser/monodoc.desktop.in: Added patch from compnerd@compnerd.org
+
+	The desktop entry for the monodoc browser is not created properly
+	with the build system.  The desktop entry's Exec line contains
+	${exec_prefix} which is not resolved from the @bindir@ entry.
+
+	This issue would be masked when the exec-prefix is explicitly
+	passed to the configure script.  Otherwise, the configure script
+	internally sets $exec_prefix to $prefix.  But this is not
+	evaluated when substituting.
+
+2005-10-27  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in (GTK_SHARP): simplify this check, since we are not
+	doing the dual 2.0/1.0 thing.
+	(MOZILLA_HOME): get the mozilla home dir from pkgconfig.
+	(MONODOC): Require monodoc in configure.in
+
+2005-10-27  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in: Make gtkhtml an optional dependency
+
+2005-07-30 Mario Sopena Novales <mario.sopena@gmail.com>
+	* configure.in: make gecko-sharp dependency conditional
+
+2005-06-09 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* configure.in: added GNUNIT_VERSION.
+
+2005-06-08  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in: Use gtk-sharp 1.0. Ensures that people won't use
+	new features.
+
+2005-05-25  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in: New .in files
+
+2005-05-08  Ben Maurer  <bmaurer@ximian.com>
+
+	* configure.in:
+	   - Check for mono and put it in RUNTIME
+	   - Don't check for monoresgen, as we don't ship that any more
+	     the correct name is `resgen'
+
+2005-05-08  Sebastien Pouliot  <sebastien@ximian.com>
+
+	* configure.in: Added lines to generate asn1view Makefiles;
+	* LICENSE: Added license informations for asn1view tool(s);
+	* Makefile.am: Added asn1view subdirectory;
+
+2005-04-23  Mike Kestner  <mkestner@novell.com>
+
+	* gnunit : moved the nunit-gtk project here.
+	* monodoc-browser : moved the gui browser here from monodoc.
+
+2003-10-11	Jonathan Pryor	<jonpryor@vt.edu>
+	* Started ChangeLog
+
