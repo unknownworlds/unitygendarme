@@ -91,6 +91,14 @@ namespace Gendarme.Framework {
 				return true;
 
 			HashSet<IMetadataTokenProvider> list;
+            if (ignore.TryGetValue("*", out list)) // wildcard support
+            {
+                if (IsIgnored(list, metadata))
+                {
+                    return true;
+                }
+            }
+
 			if (!ignore.TryGetValue (rule.FullName, out list))
 				return false; // nothing is ignored for this rule
 
@@ -181,8 +189,9 @@ namespace Gendarme.Framework {
 
 		static bool IsIgnored (ICollection<IMetadataTokenProvider> list, TypeReference type)
 		{
-			return (list.Contains (type) || IsIgnored (list, type.Module) || 
-				IsIgnored (list, NamespaceDefinition.GetDefinition (type.Namespace)));
+            if (type == null) return false;
+            return (list.Contains (type) || IsIgnored(list, type.DeclaringType) || IsIgnored (list, type.Module) || 
+                IsIgnored (list, NamespaceDefinition.GetDefinition (type.Namespace)));
 		}
 
 		static bool IsIgnored (ICollection<IMetadataTokenProvider> list, EventDefinition evnt)
