@@ -91,6 +91,14 @@ namespace Gendarme.Framework {
 				return true;
 
 			HashSet<IMetadataTokenProvider> list;
+            if (ignore.TryGetValue("*", out list)) // wildcard support
+            {
+                if (IsIgnored(list, metadata))
+                {
+                    return true;
+                }
+            }
+
 			if (!ignore.TryGetValue (rule.FullName, out list))
 				return false; // nothing is ignored for this rule
 
