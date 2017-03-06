@@ -189,8 +189,9 @@ namespace Gendarme.Framework {
 
 		static bool IsIgnored (ICollection<IMetadataTokenProvider> list, TypeReference type)
 		{
-			return (list.Contains (type) || IsIgnored (list, type.Module) || 
-				IsIgnored (list, NamespaceDefinition.GetDefinition (type.Namespace)));
+            if (type == null) return false;
+            return (list.Contains (type) || IsIgnored(list, type.DeclaringType) || IsIgnored (list, type.Module) || 
+                IsIgnored (list, NamespaceDefinition.GetDefinition (type.Namespace)));
 		}
 
 		static bool IsIgnored (ICollection<IMetadataTokenProvider> list, EventDefinition evnt)
