@@ -64,6 +64,9 @@
     </Compile>
     <Compile Include="AvoidUnusedInternalResourceRule.cs" />
     <Compile Include="SatelliteResourceMismatchRule.cs" />
+    <Compile Include="PreferStringComparisonOverrideRule.cs" />
+    <Compile Include="PreferIFormatProviderOverrideRule.cs" />
+    <Compile Include="PreferOverrideBaseRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\cecil\Mono.Cecil.csproj">
